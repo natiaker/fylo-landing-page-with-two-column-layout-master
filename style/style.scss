@@ -1,0 +1,411 @@
+@import "./variables";
+@import "./mixins";
+
+html {
+    font-size: 62.5%;
+}
+
+/* HEADER */
+.header-container {
+    padding: 2.4rem 2.4rem 0;
+    @include displayFlex(row, space-between, center);
+    .logo {
+        width: 8rem;
+        height: auto;
+    }
+    nav {
+        a {
+            @include textStyle(400, 1.2rem, 1.4rem);
+            font-family: $raleway;
+            margin-left: 2.4rem;
+            text-decoration: none;
+        }
+    }
+    @media screen and (min-width: $desktop) {
+        padding: 6.5rem 8rem 0;
+        .logo {
+            width: 16.6rem;
+            height: 4.9rem;
+        }
+    }
+}
+
+/* START SECTION */
+.input-1 {
+    width: 100%;
+    height: 4rem;
+    border: 0.0625rem solid #07043B;
+    box-shadow: .2rem .3rem .6rem rgba(0, 0, 0, 0.15925);
+    border-radius: .3125rem;
+    &::placeholder {
+        @include textStyle(400, 1.2rem, 1.4rem);
+        font-family: $raleway;
+        letter-spacing: 0.4px;
+        color: $light-gray;
+    }
+}
+.button-1 {
+    width: 100%;
+    background-color: $bright-blue;
+    margin-top: 1.6rem;
+    padding: 1.2rem 11.3rem;
+    @include textStyle(700, 1.4rem, 1.6rem);
+    font-family: $raleway;
+    color: #FFFFFF;
+    border: none;
+    box-shadow: .2rem .3rem .6rem rgba(0, 0, 0, 0.15925);
+    border-radius: .3125rem; 
+}
+#start-section {
+    padding: 0 2.4rem;
+    img {
+        padding: 9.8rem 2.7rem 9rem;
+    }
+    .start-section-content {
+        @include displayFlex(column, center, center);
+    }
+    h1 {
+        @include textStyle(700, 2.4rem, 3.6rem)
+    }
+    p {
+        @include textStyle(400, 1.6rem, 2.1rem);
+        margin-top: 2.4rem;
+        margin-bottom: 3.2rem;
+        max-width: 50rem;
+    }
+    #input-1-span {
+        @include textStyle(400,1.2rem,1.6rem);
+    }
+    @media screen and (min-width: $desktop) {
+        padding: 8.6rem 8rem 16.4rem;
+        text-align: unset;
+        @include displayFlex(row, space-between, center);
+        img {
+            padding: 0;
+            order: 2;
+            width: 50%;
+            margin-left: 1.3rem;
+        }
+        .start-buttons {
+            @include displayFlex(row, space-between, flex-start);
+            .input-1 {
+                width: 32rem;
+                height: 4.5rem;
+                margin: 0;
+                margin-right: 1.6rem;
+                padding-left: 2.1rem;
+                @include textStyle(400,1.4rem,1.9rem);
+                text-align: unset;
+                letter-spacing: 0.466667px;
+                &::placeholder {
+                    text-align: unset;
+                }
+            }
+            .button-1 {
+                width: 20rem;
+                margin: 0;
+                padding: 1.5rem 6.1rem;
+                transition: .2s ease;
+                &:hover {
+                    background-color: $button-hover;
+                    cursor: pointer;
+                }
+            }
+        }
+        p {
+            text-align: unset;
+            max-width: 58.5rem;
+        }
+        h1 {
+            @include textStyle(700, 4rem, 6rem);
+            font-family: $raleway;
+            text-align: unset;
+        }
+        .start-section-content {
+            @include displayFlex(column, center, flex-start);
+        }
+    }
+}
+
+
+
+/* STAY PRODUCTIVE SECTION */
+#stay-productive-section {
+    background-image: url(../images/Rectangle-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @media screen and (min-width: $desktop) {
+        background-image: url(../images/Rectangle.svg);
+    }
+}
+
+.stay-productive-container {
+    @include displayFlex(column, center, center);
+    margin-top: 9rem;
+    margin-left: 2.7rem;
+    margin-right: 2.7rem;
+    padding-bottom: 8.2rem;
+    .illustration {
+        padding: 9.3rem 0.3rem 8.7rem;
+    }
+    h1 {
+        @include textStyle(700, 1.6rem, 2.4rem);
+        font-family: $raleway;
+        text-align: center;
+        color: $dark-blue;
+        margin-bottom: 0.8rem;
+    }
+    p {
+        margin-top: 1.6rem;
+        @include textStyle(400, 1.4rem, 2.1rem);
+        color: $desaturated-blue;
+        max-width: 50rem;
+    }
+    .stay-productive-section-content {
+        @include displayFlex(column, center, center);
+    }
+    @media screen and (min-width: $desktop) {
+        & {
+            @include displayFlex(row,space-between,center);
+            padding-top: 17.8rem;
+            margin: 0 8rem;
+            padding-bottom:  10.7rem;
+            .illustration {
+                order: 2;
+                width: 50%;
+                padding: 0;
+                padding-bottom: 66px;
+            }
+            h1 {
+                @include textStyle(700, 4rem, 4.7rem);
+                font-family: $raleway;
+                text-align: unset;
+            }
+            p {
+                text-align: unset;
+                max-width: 53rem;
+            }
+            .stay-productive-section-content {
+                @include displayFlex(column, flex-start, flex-start);
+            }
+        }
+    }
+    .see-more {
+        display: inline-block;
+        @include displayFlex(row, center, center);
+        margin-top: 3.6rem;
+        margin-bottom: 4.7rem;
+        a {
+            @include textStyle(400, 1.2rem, 1.6rem);
+            color: $moderate-cyan;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 0.8rem;
+            padding-bottom: .6rem;
+            border-bottom: .1rem solid $moderate-cyan;
+            transition: .2s ease;
+        }
+        @media screen and (min-width: $desktop) {
+            & {
+                @include displayFlex(row,flex-start,center);
+                a:hover {
+                    color: #71DFCC;
+                    border-bottom: .1rem solid #71DFCC;
+                }
+            }
+        }
+    }
+    .card-div { 
+        background: #FFFFFF;
+        box-shadow: 0px 0px .8rem .4rem rgba(56, 56, 56, 0.0458843);
+        border-radius: .393258rem;
+        padding: 3rem 3.4rem 2.6rem;
+        max-width: 35.6rem;
+        p {
+            @include textStyle(400, 1.3rem, 2.3rem);
+            letter-spacing: 0.05rem;
+            text-align: unset;
+            margin-bottom: 1.6rem;
+        }
+    }
+    .profile-div {
+        @include displayFlex(row, flex-start, center);
+        img {
+            border-radius: 50%;
+            width: 3.2rem;
+            height: 3.2rem;
+        }
+        .profile-info {
+            @include displayFlex(column, flex-start, flex-start);
+            margin-left: .8rem;
+            h5 {
+                margin: 0;
+                @include textStyle(700, 1.1rem, 1.5rem);
+                letter-spacing: 0.055rem;
+                text-align: unset;
+            }
+            p {
+                margin: 0;
+                @include textStyle(400, .8rem, .1.5rem);
+                letter-spacing: 0.04rem;
+                text-align: unset;
+            }
+        }
+    }
+}
+
+/* GET ACCESS SECTION */
+#get-access-section {
+    background-color: $desaturated-blue;
+    .get-access-container {
+        @include displayFlex(column, center, center);
+        padding: 5.4rem 4.7rem 7.1rem;
+        h2 {
+            @include textStyle(700, 1.8rem, 2.4rem);
+            font-family: 'Raleway';
+            color: #FFFFFF;
+            margin-bottom: 1.6rem;
+        }
+        p {
+            @include textStyle(400, 1.4rem, 2.1rem);
+            color: #FFFFFF;
+            margin-bottom: 2.4rem;
+            max-width: 50rem;
+        }
+        .input-div {
+            @include displayFlex(column, center, center);
+            .input-2 {
+                @extend .input-1;
+            }
+            .button-2 {
+                @extend .button-1;
+                @include textStyle(700, 1rem, 1.2rem);
+                font-family: $raleway;
+                color: #FFFFFF;
+                padding: 1rem 7.1rem;
+            }
+            .input-div {
+                @include displayFlex(column, flex-start, flex-start);
+            }
+            #input-2-span {
+                @include textStyle(400, 1.2rem, 1.6rem);
+                text-align: unset;
+            }
+        }
+        @media screen and (min-width: $desktop) {
+            & {
+                padding: 10rem 8rem 8.5rem;
+                @include displayFlex(row, space-between, center);
+                h2 {
+                    @include textStyle(700, 3.2rem, 4.8rem);
+                    font-family: $raleway;
+                    color: white;
+                    text-align: unset;
+                }
+                p {
+                    text-align: unset;
+                    max-width: 53.3rem;
+                }
+                .input-div {
+                    @include displayFlex(column, flex-start, flex-start);
+                    width: 50%;
+                    .input-2 {
+                        min-width: 48rem;
+                        padding-left: 2.1rem;
+                        &::placeholder {
+                            text-align: unset;
+                        }
+                    }
+                    .button-2 {
+                        max-width: 20rem;
+                        padding: 1.6rem 2.2rem;
+                        transition: .2s ease;
+                        @include textStyle(700, 1.4rem, 1.6rem);
+                        font-family: $raleway;
+                        color: white;
+                        &:hover {
+                            cursor: pointer;
+                            background-color: $button-hover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+    
+/* FOOTER */
+footer {
+    background-color: $dark-blue;
+    .logo {
+        display: inline;
+        width: 10.5rem;
+        height: 3rem;
+        margin: 6.5rem 3.9rem 0;
+        @media screen and (min-width: $desktop) {
+            & {
+                margin: 9.2rem 8rem 3.6rem;
+            }
+        }
+    }
+    .footer-container {
+        padding: 3.2rem 3.9rem 4.2rem;
+        .contact-info {
+            margin-bottom: 3.2rem;
+        }
+        @media screen and (min-width: $desktop) {
+            & {
+                @include displayFlex(row, space-between, flex-start);
+                padding: 0 8rem;
+                .contact-info {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .about-div {
+        margin-bottom: 3.2rem;
+        @media screen and (min-width: $desktop) {
+            & {
+                margin-bottom: 8.6rem;
+            }
+        }
+    }
+    .other-info-div {
+        margin-bottom: 3.2rem;
+    }
+    a {
+        @include displayFlex(row, flex-start, center);
+        @include textStyle(400, 1.6rem, 2.4rem);
+        color: #FFFFFF;
+        text-decoration: none;
+        margin-bottom: 1.6rem;
+        transition: .2s ease;
+        img {
+            width: 2.0rem;
+            height: 1.6rem;
+            margin-right: 1.6rem;
+        }
+        @media screen and (min-width: $desktop) {
+            &:hover {
+                color: $bright-blue;
+            }
+        }
+    }
+    .social-icons {
+        @include displayFlex(row, center, center);
+        img {
+            width: 2.8rem;
+            height: 2.7rem;
+            display: inline;
+            margin-right: 1rem;
+            @media screen and (min-width: $desktop) {
+                &:hover {
+                    filter: invert(55%) sepia(45%) saturate(1127%) hue-rotate(195deg) brightness(100%) contrast(104%);
+                }
+            }
+        }
+    }
+}
+

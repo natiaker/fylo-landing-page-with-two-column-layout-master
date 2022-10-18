@@ -1,0 +1,15 @@
+@mixin displayFlex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;  
+    justify-content: $justify;
+    align-items: $align;  
+}
+
+@mixin textStyle($weight, $size, $height) {
+    font-family: $open-sans;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+    text-align: center;
+    color: $dark-blue;
+}
