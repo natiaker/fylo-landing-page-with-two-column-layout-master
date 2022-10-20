@@ -50,6 +50,8 @@ html {
   line-height: 1.4rem;
   text-align: center;
   color: hsl(243deg, 87%, 12%);
+  text-align: unset;
+  padding-left: 0.8rem;
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.4px;
   color: hsl(0deg, 0%, 75%);
@@ -61,6 +63,8 @@ html {
   line-height: 1.4rem;
   text-align: center;
   color: hsl(243deg, 87%, 12%);
+  text-align: unset;
+  padding-left: 0.8rem;
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.4px;
   color: hsl(0deg, 0%, 75%);
@@ -72,6 +76,8 @@ html {
   line-height: 1.4rem;
   text-align: center;
   color: hsl(243deg, 87%, 12%);
+  text-align: unset;
+  padding-left: 0.8rem;
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.4px;
   color: hsl(0deg, 0%, 75%);
@@ -141,7 +147,7 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
   #start-section img {
     padding: 0;
@@ -405,9 +411,10 @@ html {
 #get-access-section .get-access-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 5.4rem 4.7rem 7.1rem;
+  min-height: 335px;
 }
 #get-access-section .get-access-container h2 {
   font-family: "Open Sans", sans-serif;
@@ -469,7 +476,7 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
   #get-access-section .get-access-container h2 {
     font-family: "Open Sans", sans-serif;

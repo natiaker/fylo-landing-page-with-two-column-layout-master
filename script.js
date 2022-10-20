@@ -6,8 +6,8 @@ let input2span = document.getElementById("input-2-span");
 let regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 function inputValidation(input, inputspan) {
     if(input.value.match(regex)) {
-        input.style.border = "";
-        inputspan.innerText = "";
+        input.style.border = "0.0625rem solid #07043B";
+        inputspan.innerText = " ";
         return true;
     } else {
         inputspan.innerText = "Please check your email";
